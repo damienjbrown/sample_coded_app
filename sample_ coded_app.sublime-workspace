@@ -1,0 +1,431 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"us",
+				"Us"
+			],
+			[
+				"Help",
+				"Help"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "require 'rubygems'\nrequire 'spork'\n#uncomment the following line to use spork with the debugger\n#require 'spork/ext/ruby-debug'\n\nSpork.prefork do\n  # Loading more in this block will cause your tests to run faster. However,\n  # if you change any configuration or code from libraries loaded here, you'll\n  # need to restart spork for it take effect.\n\nend\n\nSpork.each_run do\n  # This code will be run each time you run your specs.\n\nend\n\n# --- Instructions ---\n# Sort the contents of this file into a Spork.prefork and a Spork.each_run\n# block.\n#\n# The Spork.prefork block is run only once when the spork server is started.\n# You typically want to place most of your (slow) initializer code in here, in\n# particular, require'ing any 3rd-party gems that you don't normally modify\n# during development.\n#\n# The Spork.each_run block is run each time you run your specs.  In case you\n# need to load files that tend to change during development, require them here.\n# With Rails, your application modules are loaded automatically, so sometimes\n# this block can remain empty.\n#\n# Note: You can modify files loaded *from* the Spork.each_run block without\n# restarting the spork server.  However, this file itself will not be reloaded,\n# so if you change any of the code inside the each_run block, you still need to\n# restart the server.  In general, if you have non-trivial code in this file,\n# it's advisable to move it into a separate file so you can easily edit it\n# without restarting spork.  (For example, with RSpec, you could move\n# non-trivial code into a file spec/support/my_helper.rb, making sure that the\n# spec/support/* files are require'd from inside the each_run block.)\n#\n# Any code that is left outside the two blocks will be run during preforking\n# *and* during each_run -- that's probably not what you want.\n#\n# These instructions should self-destruct in 10 seconds.  If they don't, feel\n# free to delete them.\n\n\n\n\n# This file is copied to spec/ when you run 'rails generate rspec:install'\nENV[\"RAILS_ENV\"] ||= 'test'\nrequire File.expand_path(\"../../config/environment\", __FILE__)\nrequire 'rspec/rails'\nrequire 'rspec/autorun'\n\n# Requires supporting ruby files with custom matchers and macros, etc,\n# in spec/support/ and its subdirectories.\nDir[Rails.root.join(\"spec/support/**/*.rb\")].each {|f| require f}\n\nRSpec.configure do |config|\n  # ## Mock Framework\n  #\n  # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:\n  #\n  # config.mock_with :mocha\n  # config.mock_with :flexmock\n  # config.mock_with :rr\n\n  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures\n  config.fixture_path = \"#{::Rails.root}/spec/fixtures\"\n\n  # If you're not using ActiveRecord, or you'd prefer not to run each of your\n  # examples within a transaction, remove the following line or assign false\n  # instead of true.\n  config.use_transactional_fixtures = true\n\n  # If true, the base class of anonymous controllers will be inferred\n  # automatically. This will be the default behavior in future versions of\n  # rspec-rails.\n  config.infer_base_class_for_anonymous_controllers = false\nend\n\n\n\n\n\n\n\n\n\n\nrequire 'spec_helper'\n\ndescribe \"Static pages\" do\n\n  let(:base_title) { \"Ruby on Rails tut!!\" }\n\n  describe \"Home page\" do\n\n    it \"should have the h1 'Sample A pp'\" do\n      visit '/static_pages/home'\n      page.should have_selector('h1', :text => 'Sample App')\n    end\n\n    it \"should have the title 'Home'\" do\n      visit '/static_pages/home'\n      page.should have_selector('title', \n        :text => \"#{base_title} | Home\")\n    end\n\n  end\n\n  describe \"Help page\" do\n    it \"should have the h1 'Help'\" do\n      visit '/static_pages/help'\n      page.should have_selector('h1', :text => 'Help')\n    end\n\n    it \"should have the title 'Help'\" do\n      visit '/static_pages/help'\n      page.should have_selector('title', \n        :text => \"#{base_title} | Help\")\n    end\n    \n  end\n  \n  describe \"About page\" do\n    it \"should have the h1 'About Us'\" do\n      visit '/static_pages/about'\n      page.should have_selector('h1', :text => 'About Us')\n    end\n\n    it \"should have the title 'About Us'\" do\n      visit '/static_pages/about'\n      page.should have_selector('title', \n        :text => \"#{base_title} | About Us\")\n    end\n    \n  end\n\n  describe \"Contact\" do\n    it \"should have the h1 'Contact'\" do\n      visit '/static_pages/contact'\n      page.should have_selector('h1', :text => 'Contact')\n    end\n\n    it \"should have the title 'Contact'\" do\n      visit '/static_pages/contact'\n      page.should have_selector('title', \n        :text => \"#{base_title} | Contact\")\n    end\n    \n  end\n\nend\n",
+			"settings":
+			{
+				"buffer_size": 4632,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".rspec",
+			"settings":
+			{
+				"buffer_size": 9,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/requests/static_pages_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1473,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/static_pages_controller.rb",
+			"settings":
+			{
+				"buffer_size": 135,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/static_pages/contact.html.erb",
+			"settings":
+			{
+				"buffer_size": 81,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1907,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"selected_items":
+		[
+			[
+				"ruby",
+				"RubyTest: Run Last Ruby Test"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Sites/sample_coded_app/spec/controllers/static_pages_controller_spec.rb",
+		"/C/Sites/sample_coded_app/spec/helpers/static_pages_helper_spec.rb",
+		"/C/Sites/sample_coded_app/app/views/static_pages/about.html.erb",
+		"/C/Sites/sample_coded_app/spec/spec_helper.rb",
+		"/C/Sites/sample_coded_app/Gemfile",
+		"/C/Sites/sample_coded_app/config/routes.rb",
+		"/C/Sites/sample_coded_app/app/controllers/static_pages_controller.rb",
+		"/C/Sites/sample_coded_app/app/views/static_pages/home.html.erb",
+		"/C/Sites/sample_coded_app/spec/requests/static_pages_spec.rb",
+		"/C/Sites/sample_coded_app/spec/views/static_pages/home.html.erb_spec.rb",
+		"/C/Sites/sample_coded_app/spec/views/static_pages/help.html.erb_spec.rb",
+		"/C/Sites/sample_coded_app/spec/views/static_pages/about.html.erb_spec.rb",
+		"/C/Sites/sample_coded_app/spec/views/static_pages/contact.html.erb_spec.rb",
+		"/C/Sites/sample_coded_app/.gitignore",
+		"/C/Sites/sample_coded_app/Guardfile2",
+		"/C/Users/D385507/AppData/Roaming/Sublime Text 2/Packages/User/RubyTest.sublime-settings",
+		"/C/Users/D385507/AppData/Roaming/Sublime Text 2/Packages/Theme - Default/Widget.sublime-settings",
+		"/C/Sites/sample_coded_app/config/environments/test.rb",
+		"/C/Sites/sample_coded_app/sample_ coded_app.sublime-project",
+		"/C/Sites/sample_coded_app/sample_ coded_app.sublime-workspace",
+		"/C/Sites/sample_coded_app/Guardfile",
+		"/C/Sites/sample_coded_app/.rspec",
+		"/C/Sites/sample_coded_app/app/controllers/application_controller.rb",
+		"/C/Sites/sample_coded_app/app/views/layouts/application.html.erb",
+		"/C/Sites/sample_coded_app/app/views/static_pages/contact.html.erb",
+		"/C/Sites/sample_coded_app/app/views/static_pages/help.html.erb",
+		"/C/Sites/sample_coded_app/public/index.html",
+		"/C/Sites/sample_coded_app/public/howdy.html",
+		"/C/Sites/sample_coded_app/.git/config",
+		"/C/Sites/scaffold_1_app/.git/config",
+		"/C/Sites/new_rail/scaffold_app/.git/config",
+		"/C/Sites/new_rail/first_app/.gitignore",
+		"/C/Sites/sample_coded_app/README.md",
+		"/C/Sites/scaffold_1_app/.bundle/config",
+		"/C/Sites/new_rail/first_app/README.md",
+		"/C/Sites/new_rail/first_app/.git/config",
+		"/C/Users/D385507/.ssh/github_rsa.pub",
+		"/C/Users/D385507/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Sites/scaffold_1_app/README.md",
+		"/C/Sites/new_rail/first_app/.git/refs/heads/master",
+		"/C/Users/D385507/.ssh/id_rsa.pub",
+		"/C/Users/D385507/.ssh/known_hosts",
+		"/C/Sites/new_rail/scaffold_app/Gemfile",
+		"/C/Sites/new_rail/scaffold_app/app/models/user.rb",
+		"/C/Sites/new_rail/scaffold_app/app/models/micropost.rb",
+		"/C/Sites/new_rail/scaffold_app/config/routes.rb",
+		"/C/Sites/new_rail/scaffold_app/app/views/users/index.html.erb",
+		"/C/Sites/new_rail/scaffold_app/app/views/layouts/application.html.erb",
+		"/C/Sites/new_rail/scaffold_app/app/controllers/users_controller.rb",
+		"/C/Sites/new_rail/scaffold_app/app/controllers/microposts_controller.rb",
+		"/C/Sites/scaffold_1_app/Gemfile",
+		"/C/Sites/scaffold_1_app/.gitignore",
+		"/C/Sites/new_rail/scaffold_app/app/models/.gitkeep",
+		"/C/Sites/new_rail/scaffold_app/app/mailers/.gitkeep",
+		"/C/Sites/new_rail/scaffold_app/app/helpers/users_helper.rb",
+		"/C/Sites/new_rail/scaffold_app/app/assets/stylesheets/application.css",
+		"/C/Users/D385507/.gitconfig",
+		"/C/Sites/new_rail/scaffold_app/app/assets/stylesheets/users.css.scss",
+		"/C/Sites/new_rail/scaffold_app/app/assets/stylesheets/scaffolds.css.scss",
+		"/C/Sites/new_rail/scaffold_app/README.rdoc",
+		"/C/Users/D385507/.ssh/github_rsa",
+		"/C/Sites/new_rail/scaffold_app/.gitignore",
+		"/C/Users/D385507/.recently-used.xbel",
+		"/C/Sites/new_rail/first_app/Gemfile"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Sites\\sample_coded_app",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"static_pages/contact",
+			"static_pages/home",
+			"pending \"add some",
+			"awk",
+			"Ruby on Rails tut!!",
+			"1000"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#{base_title}"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 4632,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3182,
+								3575
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1290.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".rspec",
+					"settings":
+					{
+						"buffer_size": 9,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9,
+								9
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "spec/requests/static_pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1446,
+								1446
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 252.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/static_pages_controller.rb",
+					"settings":
+					{
+						"buffer_size": 135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								124,
+								124
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/static_pages/contact.html.erb",
+					"settings":
+					{
+						"buffer_size": 81,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 1907,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								150,
+								150
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.tests":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 316.0,
+	"status_bar_visible": true
+}
