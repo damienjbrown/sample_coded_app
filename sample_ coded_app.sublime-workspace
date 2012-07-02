@@ -27,7 +27,7 @@
 			"file": ".rspec",
 			"settings":
 			{
-				"buffer_size": 9,
+				"buffer_size": 14,
 				"line_ending": "Unix"
 			}
 		},
@@ -44,22 +44,6 @@
 			"settings":
 			{
 				"buffer_size": 135,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/static_pages/contact.html.erb",
-			"settings":
-			{
-				"buffer_size": 81,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 1907,
 				"line_ending": "Unix"
 			}
 		}
@@ -92,12 +76,23 @@
 	},
 	"file_history":
 	[
+		"/C/Users/D385507/AppData/Roaming/Sublime Text 2/Packages/RubyTest/run_ruby_test.pyc",
+		"/C/Users/D385507/AppData/Roaming/Sublime Text 2/Packages/RubyTest/messages.txt",
+		"/C/Users/D385507/AppData/Roaming/Sublime Text 2/Packages/RubyTest/Main.sublime-menu",
+		"/C/Users/D385507/AppData/Roaming/Sublime Text 2/Packages/RubyTest/Default.sublime-commands",
+		"/C/Users/D385507/AppData/Roaming/Sublime Text 2/Packages/RubyTest/Default (Windows).sublime-keymap",
+		"/C/Users/D385507/AppData/Roaming/Sublime Text 2/Packages/RubyTest/run_ruby_test.py",
+		"/C/Users/D385507/AppData/Roaming/Sublime Text 2/Packages/RubyTest/messages/install.txt",
+		"/C/Users/D385507/AppData/Roaming/Sublime Text 2/Packages/RubyTest/.gitignore",
+		"/C/Sites/sample_coded_app/Guardfile",
+		"/C/Sites/sample_coded_app/Gemfile",
+		"/C/Sites/sample_coded_app/spec/spec_helper.rb",
+		"/C/Sites/sample_coded_app/app/views/static_pages/contact.html.erb",
+		"/C/Sites/sample_coded_app/config/routes.rb",
+		"/C/Sites/Guardfile2",
 		"/C/Sites/sample_coded_app/spec/controllers/static_pages_controller_spec.rb",
 		"/C/Sites/sample_coded_app/spec/helpers/static_pages_helper_spec.rb",
 		"/C/Sites/sample_coded_app/app/views/static_pages/about.html.erb",
-		"/C/Sites/sample_coded_app/spec/spec_helper.rb",
-		"/C/Sites/sample_coded_app/Gemfile",
-		"/C/Sites/sample_coded_app/config/routes.rb",
 		"/C/Sites/sample_coded_app/app/controllers/static_pages_controller.rb",
 		"/C/Sites/sample_coded_app/app/views/static_pages/home.html.erb",
 		"/C/Sites/sample_coded_app/spec/requests/static_pages_spec.rb",
@@ -112,11 +107,9 @@
 		"/C/Sites/sample_coded_app/config/environments/test.rb",
 		"/C/Sites/sample_coded_app/sample_ coded_app.sublime-project",
 		"/C/Sites/sample_coded_app/sample_ coded_app.sublime-workspace",
-		"/C/Sites/sample_coded_app/Guardfile",
 		"/C/Sites/sample_coded_app/.rspec",
 		"/C/Sites/sample_coded_app/app/controllers/application_controller.rb",
 		"/C/Sites/sample_coded_app/app/views/layouts/application.html.erb",
-		"/C/Sites/sample_coded_app/app/views/static_pages/contact.html.erb",
 		"/C/Sites/sample_coded_app/app/views/static_pages/help.html.erb",
 		"/C/Sites/sample_coded_app/public/index.html",
 		"/C/Sites/sample_coded_app/public/howdy.html",
@@ -175,6 +168,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"directory",
 			"static_pages/contact",
 			"static_pages/home",
 			"pending \"add some",
@@ -213,7 +207,7 @@
 						"selection":
 						[
 							[
-								3182,
+								3575,
 								3575
 							]
 						],
@@ -224,7 +218,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1290.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -234,15 +228,15 @@
 					"file": ".rspec",
 					"settings":
 					{
-						"buffer_size": 9,
+						"buffer_size": 14,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9,
-								9
+								14,
+								14
 							]
 						],
 						"settings":
@@ -267,8 +261,8 @@
 						"selection":
 						[
 							[
-								1446,
-								1446
+								401,
+								401
 							]
 						],
 						"settings":
@@ -278,7 +272,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 252.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -302,60 +296,6 @@
 						"settings":
 						{
 							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/static_pages/contact.html.erb",
-					"settings":
-					{
-						"buffer_size": 81,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								45,
-								45
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "config/routes.rb",
-					"settings":
-					{
-						"buffer_size": 1907,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								150,
-								150
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
